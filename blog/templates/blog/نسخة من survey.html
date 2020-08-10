@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="topnav">
+    
+  <a class="active" href="{% url 'home' %}">الصفحة الرئيسية</a>
+  {% if not request.user.is_authenticated %}
+  <a href="{% url 'new1' %}">حساب جديد </a>
+  {% endif%}
+  {% if not request.user.is_authenticated %}
+  <a href="{% url 'log1' %}">تسحيل الدخول </a>
+  {% endif%}
+  <a href="{% url 'ask1' %}">اسأل هنا</a>
+  <a href="{% url 'ans1' %}">أجب</a>
+  {% if request.user.is_authenticated %}
+  <a href="{% url 'out1' %}">تسجيل الخروج</a>
+  {% endif%}
+
+
+
+</div>
+
+
+</body>
+</html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Questionnaire Form by Tooplate</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/tooplate.css">
+</head>
+
+<body id="survey" class="font-weight-light">
+    <div class="container tm-container-max-800">
+        <div class="row">
+            <div class="col-12">
+                <header class="mt-5 mb-5 text-center">
+                    <h1 class="font-weight-light tm-form-title text-white">البيانات الشخصية</h1>
+                </header>
+                <form action="" method="post">
+                    <div class="tm-bg-black tm-form-block">
+                        <div class="input-field">
+                        <P dir="rtl" align="right" >
+                            <input placeholder="الإسم" name="name" id="name" type="text" class="validate"><br>
+                            </P>                           
+                        </div>
+                        <div class="input-field">	
+                        <P dir="rtl" align="right" >
+                            <input placeholder="البريد الإلكتروني" name="email" id="email" type="text" class="validate">
+                            </P>
+                        </div>
+                        <div class="input-field">					
+                         <P dir="rtl" align="right" >
+                            <input placeholder="العمر" name="age" id="age" type="text" class="validate">
+                            </P>
+                        </div>
+                        <p class="text-right text-white"> الجنس</p>
+                        <ul class="text-right">
+                            <li>
+                                <label>
+                                    <input class="with-gap" name="group1" value="value1" type="radio" />
+                                    <span>ذكر</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input class="with-gap" name="group1" value="value1" type="radio" />
+                                    <span>أنثى</span>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <div class="col-xl-12">
+                        <P dir="rtl" align="right" >
+                            <textarea class="p-3" name="message" id="message" cols="30" rows="3" placeholder=" اضف نبذة عنك..(اختياري)"></textarea>
+                           </P>
+                        </div>
+                        <div class="text-center mt-4">
+                            <P dir="rtl" align="left" >
+                               <button type="حفظ" class="waves-effect btn-small btn-large-white">حفظ</button>
+                            </P>
+
+                        </div> 
+
+
+                       </div> 
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <footer class="row tm-mt-big mb-3">
+            <div class="col-xl-12">
+                <p class="text-center grey-text text-lighten-2 tm-footer-text-small">
+                    Copyright &copy; 2020 H A C K 
+                    
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="topnav">
+   <a class="active" href="index.html">الصفحة الرئيسية</a>
+  <a  href="register.html">حساب جديد</a>
+  <a href="survey.html">الملف الشخصي</a>
+  <a href="application.html">اسأل هنا</a>
+  <a href="signup.html">أجب</a>
+</div>
+
+
+</body>
+</html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form by Tooplate</title>
+	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+    
+    
+    
+</head>
+{% block content %}
+
+<body>
+
+
+
+        <footer class="row tm-mt-big mb-5">
+            <div class="col-xl-12 text-center">
+                {% block content %}
+
+                {% endblock content %}
+
+                <p class="d-inline-block tm-bg-gray white-text py-2 tm-px-5">
+                    Copyright &copy; 2020 H A C K 
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+{% endblock content %}
+
+</html>
